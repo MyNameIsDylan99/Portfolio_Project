@@ -1,7 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[Serializable]
 public class Cell : MonoBehaviour
 {
     //Properties
@@ -31,16 +33,7 @@ public class Cell : MonoBehaviour
         Burning,
         Burned
     }
-    // Start is called before the first frame update
-    void Start()
-    {
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
     public void SetState(States state)
     {
         this.state = state;
@@ -67,6 +60,9 @@ public class Cell : MonoBehaviour
         }
           
     }
-
+    public void DeleteCell()
+    {
+        DestroyImmediate(gameObject);
+    }
 
 }

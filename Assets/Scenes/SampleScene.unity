@@ -242,7 +242,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 755552822}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.2738433, y: 8.947839, z: -52.4}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -262,9 +262,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cellPrefab: {fileID: 1111797335311579917, guid: 6c46fae21615d2042977afc5daa9db75, type: 3}
+  gridPrefab: {fileID: 8985831793967270001, guid: 0288290c091e03545ae6ea06b05e3581, type: 3}
   height: 20
   width: 20
   depth: 20
+  gridContainer: {fileID: 0}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -342,7 +344,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -90.25}
+  m_LocalPosition: {x: 0, y: 1, z: -50}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
