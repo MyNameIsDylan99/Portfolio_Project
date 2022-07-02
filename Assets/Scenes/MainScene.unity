@@ -227,8 +227,9 @@ GameObject:
   m_Component:
   - component: {fileID: 755552824}
   - component: {fileID: 755552825}
+  - component: {fileID: 755552826}
   m_Layer: 0
-  m_Name: GridCreator
+  m_Name: GameManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -266,7 +267,24 @@ MonoBehaviour:
   height: 20
   width: 20
   depth: 20
+  randomFillPercent: 20
   gridContainer: {fileID: 0}
+--- !u!114 &755552826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 755552822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7776f90439069744b56b7b86fbfb883, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  randomGravityReceiverAmount: 20
+  gravityReceiverPrefab: {fileID: 6074106322491360346, guid: 674ceb3ac3b245f468f247ee7527d928, type: 3}
+  gravityTriggerPrefab: {fileID: 8944035740660006579, guid: b9a23022bb3834c4aafc44d0680db5d2, type: 3}
+  mass: 1000
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0

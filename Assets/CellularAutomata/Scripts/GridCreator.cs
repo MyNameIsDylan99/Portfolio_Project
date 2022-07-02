@@ -15,14 +15,16 @@ public class GridCreator : MonoBehaviour
     int width;
     [SerializeField]
     int depth;
-
+    [SerializeField]
+    [Range(0, 100)]
+    int randomFillPercent; 
     [SerializeField]
     GridContainer gridContainer;
 
     Cell[,,] grid;
     public void GenerateGrid()
     {
-        if(gridContainer != null)
+        if (gridContainer != null)
             gridContainer.DeleteGrid();
 
         grid = new Cell[width, height, depth];
@@ -37,10 +39,10 @@ public class GridCreator : MonoBehaviour
                     cellGO.transform.position = new Vector3(-width / 2 + x, -height / 2 + y, -depth / 2 + z);
                     grid[x, y, z] = cellGO.GetComponent<Cell>();
                     //grid[x, y, z].SetState(Cell.States.Fresh);
-                    if (y <= height * 0.5f + 2 && y >= height * 0.5f - 2 && x <= width * 0.5f + 2 && x >= width * 0.5f - 2&& z <= depth * 0.5f + 2 && z >= depth * 0.5f - 2)
+                    if (y <= height * 0.5f + 2 && y >= height * 0.5f - 2 && x <= width * 0.5f + 2 && x >= width * 0.5f - 2 && z <= depth * 0.5f + 2 && z >= depth * 0.5f - 2)
                         grid[x, y, z].SetState(Cell.States.Burning);
 
-                    else if (random < 80)
+                    else if (random > randomFillPercent)
                         grid[x, y, z].SetState(Cell.States.Air);
                     else
                         grid[x, y, z].SetState(Cell.States.Fresh);

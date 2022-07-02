@@ -10,20 +10,6 @@ public class Cell : MonoBehaviour
     public States State { get => state; private set => state = value; }
     public float TimeWhenStartedBurning { get => timeWhenStartedBurning; private set => timeWhenStartedBurning = value; }
     //Fields
-
-    //Materials
-    [SerializeField]
-    Material fresh;
-    [SerializeField]
-    Material starting;
-    [SerializeField]
-    Material burning;
-    [SerializeField]
-    Material burned;
-
-    States state = States.Fresh;
-
-
     float timeWhenStartedBurning;
     public enum States
     {
@@ -33,6 +19,16 @@ public class Cell : MonoBehaviour
         Burning,
         Burned
     }
+    States state = States.Fresh;
+    //Materials
+    [SerializeField]
+    Material fresh;
+    [SerializeField]
+    Material starting;
+    [SerializeField]
+    Material burning;
+    [SerializeField]
+    Material burned;
 
     public void SetState(States state)
     {

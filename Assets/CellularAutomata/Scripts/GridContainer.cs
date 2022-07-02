@@ -13,6 +13,8 @@ public class GridContainer : MonoBehaviour
     int width;
     [SerializeField]
     int depth;
+
+      //The idea behind serializableGrid is to "flatten" the 3D array into a 1D array so unity is able so serialize it and doesn't lose the data when you start playmode.
     [SerializeField]
     Cell[] serializableGrid;
 
@@ -39,7 +41,7 @@ public class GridContainer : MonoBehaviour
                             {
                                 case Cell.States.Starting:
                                     random = Random.Range(0, 100);
-                                    //30% Chance to make current cell switch from state "Starting" to state "Burning".
+                                    //15% Chance to make current cell switch from state "Starting" to state "Burning".
                                     if (random < 15)
                                         updatedGrid[x, y, z].SetState(Cell.States.Burning);
                                     break;
