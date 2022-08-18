@@ -1,0 +1,300 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 2025852851, guid: bee868d855e9e4a41b15f32663751a44, type: 3}
+  m_Name: PVE Style Sheet
+  m_EditorClassIdentifier: 
+  styles:
+  - mInitialised: 1
+    matchMethod: 0
+    matchValue: AI
+    priority: 0
+    recursive: 0
+    overrideIcon: 1
+    iconName: Platform - Android
+    overrideLabel: 1
+    labelColour: {r: 0.89226073, g: 1.0636526, b: 0.35231236, a: 1}
+    labelStyle: 0
+    overrideBackground: 1
+    backgroundName: Fade To Right
+    backgroundColour: {r: 0.643, g: 0.776, b: 0.224, a: 0.25}
+    visibleInInspector: 1
+    styleFilteredInInspector: 0
+  - mInitialised: 1
+    matchMethod: 0
+    matchValue: CellularAutomata
+    priority: 0
+    recursive: 0
+    overrideIcon: 1
+    iconName: Asset - Mesh
+    overrideLabel: 1
+    labelColour: {r: 0.51221365, g: 1.003568, b: 1.2240293, a: 1}
+    labelStyle: 0
+    overrideBackground: 1
+    backgroundName: Fade To Right
+    backgroundColour: {r: 0.2, g: 0.541, b: 0.694, a: 0.25}
+    visibleInInspector: 1
+    styleFilteredInInspector: 0
+  - mInitialised: 1
+    matchMethod: 0
+    matchValue: PhysicsGravitySphere
+    priority: 0
+    recursive: 0
+    overrideIcon: 1
+    iconName: Shape - Pink Circle Coloured
+    overrideLabel: 1
+    labelColour: {r: 1.5056272, g: 0.5448428, b: 1.3634702, a: 1}
+    labelStyle: 0
+    overrideBackground: 1
+    backgroundName: Fade To Right
+    backgroundColour: {r: 0.612, g: 0.024, b: 0.525, a: 0.25}
+    visibleInInspector: 1
+    styleFilteredInInspector: 0
+  - mInitialised: 1
+    matchMethod: 0
+    matchValue: Scene
+    priority: 0
+    recursive: 0
+    overrideIcon: 1
+    iconName: Asset - Scene
+    overrideLabel: 1
+    labelColour: {r: 1, g: 1, b: 1, a: 1}
+    labelStyle: 0
+    overrideBackground: 1
+    backgroundName: Fade To Right
+    backgroundColour: {r: 0.941, g: 0.941, b: 0.941, a: 0.25}
+    visibleInInspector: 1
+    styleFilteredInInspector: 0
+  - mInitialised: 1
+    matchMethod: 2
+    matchValue: 3a2f15911eff75b4cb213ea398b3a428
+    priority: 0
+    recursive: 0
+    overrideIcon: 1
+    iconName: Colour - Black
+    overrideLabel: 1
+    labelColour: {r: 0.9716981, g: 0.9716981, b: 0.9716981, a: 1}
+    labelStyle: 0
+    overrideBackground: 1
+    backgroundName: Fade To Right
+    backgroundColour: {r: 0, g: 0, b: 0, a: 0.25}
+    visibleInInspector: 1
+    styleFilteredInInspector: 0
+  - mInitialised: 1
+    matchMethod: 0
+    matchValue: Materials
+    priority: 0
+    recursive: 0
+    overrideIcon: 1
+    iconName: Asset - Material
+    overrideLabel: 1
+    labelColour: {r: 0.8113208, g: 0, b: 0.10619214, a: 1}
+    labelStyle: 0
+    overrideBackground: 1
+    backgroundName: Fade To Right
+    backgroundColour: {r: 0.8117647, g: 0, b: 0.105882354, a: 0.25}
+    visibleInInspector: 1
+    styleFilteredInInspector: 0
+  - mInitialised: 1
+    matchMethod: 0
+    matchValue: Prefabs
+    priority: 0
+    recursive: 0
+    overrideIcon: 1
+    iconName: Asset - Prefab
+    overrideLabel: 1
+    labelColour: {r: 0.51221365, g: 1.003568, b: 1.2240293, a: 1}
+    labelStyle: 0
+    overrideBackground: 1
+    backgroundName: Fade To Right
+    backgroundColour: {r: 0.2, g: 0.541, b: 0.694, a: 0.25}
+    visibleInInspector: 1
+    styleFilteredInInspector: 0
+  - mInitialised: 1
+    matchMethod: 0
+    matchValue: Scripts
+    priority: 0
+    recursive: 0
+    overrideIcon: 1
+    iconName: Asset - Script Coloured
+    overrideLabel: 1
+    labelColour: {r: 0.49681753, g: 1.1290292, b: 0.5256637, a: 1}
+    labelStyle: 0
+    overrideBackground: 1
+    backgroundName: Fade To Right
+    backgroundColour: {r: 0.153, g: 0.416, b: 0.165, a: 0.25}
+    visibleInInspector: 1
+    styleFilteredInInspector: 0
+  - mInitialised: 1
+    matchMethod: 2
+    matchValue: 7767bab70da12df4caa8adf12fa6676b
+    priority: 0
+    recursive: 0
+    overrideIcon: 1
+    iconName: Colour - Mahogany
+    overrideLabel: 1
+    labelColour: {r: 1.3985964, g: 0.7003641, b: 0.7003641, a: 1}
+    labelStyle: 0
+    overrideBackground: 0
+    backgroundName: 
+    backgroundColour: {r: 0, g: 0, b: 0, a: 0}
+    visibleInInspector: 1
+    styleFilteredInInspector: 0
+  - mInitialised: 1
+    matchMethod: 2
+    matchValue: 7159096c8c5736f4aaf6a78929af3c07
+    priority: 0
+    recursive: 0
+    overrideIcon: 1
+    iconName: Colour - Royal Blue
+    overrideLabel: 1
+    labelColour: {r: 0.74634826, g: 0.77377677, b: 1.4777769, a: 1}
+    labelStyle: 0
+    overrideBackground: 0
+    backgroundName: 
+    backgroundColour: {r: 0, g: 0, b: 0, a: 0}
+    visibleInInspector: 1
+    styleFilteredInInspector: 0
+  - mInitialised: 1
+    matchMethod: 0
+    matchValue: ProceduralTerrain
+    priority: 0
+    recursive: 0
+    overrideIcon: 1
+    iconName: Shape - Blue Circle
+    overrideLabel: 1
+    labelColour: {r: 0.64511865, g: 0.91323453, b: 1.304539, a: 1}
+    labelStyle: 0
+    overrideBackground: 1
+    backgroundName: Flat
+    backgroundColour: {r: 0.235, g: 0.42, b: 0.69, a: 0.25}
+    visibleInInspector: 1
+    styleFilteredInInspector: 0
+  - mInitialised: 1
+    matchMethod: 2
+    matchValue: a2d32991c37ff7948b6b6c66000e7fa0
+    priority: 0
+    recursive: 0
+    overrideIcon: 1
+    iconName: Colour - Red
+    overrideLabel: 1
+    labelColour: {r: 1.570865, g: 0.57086504, b: 0.57086504, a: 1}
+    labelStyle: 0
+    overrideBackground: 1
+    backgroundName: Flat
+    backgroundColour: {r: 1, g: 0, b: 0, a: 0.25}
+    visibleInInspector: 1
+    styleFilteredInInspector: 0
+  - mInitialised: 1
+    matchMethod: 2
+    matchValue: cbe349b5bc2d249479f7985e736c9323
+    priority: 0
+    recursive: 0
+    overrideIcon: 1
+    iconName: Asset - Shader
+    overrideLabel: 1
+    labelColour: {r: 0.9928098, g: 1.0074083, b: 0.90886813, a: 1}
+    labelStyle: 0
+    overrideBackground: 1
+    backgroundName: Flat
+    backgroundColour: {r: 0.54, g: 0.548, b: 0.494, a: 0.25}
+    visibleInInspector: 1
+    styleFilteredInInspector: 0
+  - mInitialised: 1
+    matchMethod: 2
+    matchValue: 01d28402d3babd048b8307183c0feb29
+    priority: 0
+    recursive: 0
+    overrideIcon: 1
+    iconName: Asset - Scene
+    overrideLabel: 1
+    labelColour: {r: 1, g: 1, b: 1, a: 1}
+    labelStyle: 0
+    overrideBackground: 1
+    backgroundName: Flat
+    backgroundColour: {r: 0.941, g: 0.941, b: 0.941, a: 0.25}
+    visibleInInspector: 1
+    styleFilteredInInspector: 0
+  - mInitialised: 1
+    matchMethod: 0
+    matchValue: RenderPipeline
+    priority: 0
+    recursive: 0
+    overrideIcon: 1
+    iconName: Asset - Scriptable Object
+    overrideLabel: 1
+    labelColour: {r: 1.084791, g: 0.93825096, b: 0.9165413, a: 1}
+    labelStyle: 0
+    overrideBackground: 1
+    backgroundName: Flat
+    backgroundColour: {r: 0.737, g: 0.629, b: 0.613, a: 0.25}
+    visibleInInspector: 1
+    styleFilteredInInspector: 0
+  - mInitialised: 1
+    matchMethod: 2
+    matchValue: 2849e47f94f4f6047be9a978d4e6840f
+    priority: 0
+    recursive: 0
+    overrideIcon: 1
+    iconName: Asset - Video Coloured
+    overrideLabel: 1
+    labelColour: {r: 0.51221365, g: 1.003568, b: 1.2240293, a: 1}
+    labelStyle: 0
+    overrideBackground: 1
+    backgroundName: Flat
+    backgroundColour: {r: 0.2, g: 0.541, b: 0.694, a: 0.25}
+    visibleInInspector: 1
+    styleFilteredInInspector: 0
+  - mInitialised: 1
+    matchMethod: 2
+    matchValue: cae06e6d049b5f7439f1fb5260899cae
+    priority: 0
+    recursive: 0
+    overrideIcon: 1
+    iconName: Colour - Pelorous
+    overrideLabel: 1
+    labelColour: {r: 0.37726063, g: 1.1113327, b: 1.1168728, a: 1}
+    labelStyle: 0
+    overrideBackground: 1
+    backgroundName: Flat
+    backgroundColour: {r: 0.188, g: 0.718, b: 0.722, a: 0.25}
+    visibleInInspector: 1
+    styleFilteredInInspector: 0
+  - mInitialised: 1
+    matchMethod: 2
+    matchValue: f7c341434c7dd5b459152740dd92ba68
+    priority: 0
+    recursive: 0
+    overrideIcon: 1
+    iconName: Colour - Gold
+    overrideLabel: 1
+    labelColour: {r: 1.1383508, g: 0.94899434, b: 0.37102413, a: 1}
+    labelStyle: 0
+    overrideBackground: 1
+    backgroundName: Flat
+    backgroundColour: {r: 0.808, g: 0.655, b: 0.188, a: 0.25}
+    visibleInInspector: 1
+    styleFilteredInInspector: 0
+  - mInitialised: 1
+    matchMethod: 2
+    matchValue: 607ea7ae4849e814c926ac7a3b75a8e3
+    priority: 0
+    recursive: 0
+    overrideIcon: 1
+    iconName: Shape - Green Circle
+    overrideLabel: 1
+    labelColour: {r: 0.25509483, g: 1.19383, b: 0.25509483, a: 1}
+    labelStyle: 0
+    overrideBackground: 1
+    backgroundName: 
+    backgroundColour: {r: 0.031, g: 0.506, b: 0.031, a: 0.25}
+    visibleInInspector: 1
+    styleFilteredInInspector: 0

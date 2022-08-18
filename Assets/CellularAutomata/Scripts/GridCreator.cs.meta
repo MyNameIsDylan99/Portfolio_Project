@@ -3,7 +3,12 @@ guid: a5cc49d4fafb57e46bb219aa6d6832b6
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - cellPrefab: {fileID: 1111797335311579917, guid: 6c46fae21615d2042977afc5daa9db75, type: 3}
+  - gridPrefab: {fileID: 8985831793967270001, guid: 0288290c091e03545ae6ea06b05e3581, type: 3}
+  - raycastManager: {instanceID: 0}
+  - gridContainer: {instanceID: 0}
+  - destroyPreviewMat: {fileID: 2100000, guid: 9cfbedc2b6d9a81419f08e2394cf03db, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

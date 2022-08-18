@@ -3,76 +3,125 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class AI : MonoBehaviour
-{
-    [SerializeField]
-    Transform playerTransform;
-    [SerializeField]
-    float sightRange = 10f;
-    Vector3 startingPosition;
-    Vector3 roamingPosition;
-    NavMeshAgent agent;
-    NavMeshPath path;
 
-    enum State
-    {
-        Roaming,
-        Chasing,
-    }
-    State state;
-    private void Start()
-    {
-        agent = GetComponent<NavMeshAgent>();
-        path = new NavMeshPath();
-        startingPosition = transform.position;
-        roamingPosition = GetRoamingPosition();
-        state = State.Roaming;
-    }
-    private void Update()
-    {
-        switch (state)
-        {
-            case State.Roaming:
-                agent.destination = roamingPosition;
-                if (Vector3.Distance(agent.destination, transform.position) < 2f)
-                    roamingPosition = GetRoamingPosition();
-                CheckIfPlayerInRange();
-                break;
-            case State.Chasing:
-                agent.destination = playerTransform.position;
-                CheckIfPlayerInRange();
-                break;
+namespace AI {
+
+    public class AI : MonoBehaviour {
+
+        #region SerializedFields
+        [SerializeField]
+        Animator animator;
+        [SerializeField]
+        Transform playerTransform;
+        [SerializeField]
+        float sightRange = 10f;
+        [SerializeField]
+        float chasingSpeed = 5f;
+        [SerializeField]
+        float roamingSpeed = 3f;
+        #endregion
+
+        #region Fields
+
+        NavMeshAgent agent;
+
+        float hitCooldown;
+        float timeSinceLastHit;
+
+
+        Dictionary<string, State> states = new Dictionary<string, State>();
+        State state;
+
+        #endregion
+
+        #region Methods
+
+        private void Awake() {
+            animator = GetComponent<Animator>();
+            agent = GetComponent<NavMeshAgent>();
+            Add("Roaming", new Roaming(this, agent, transform, roamingSpeed));
+            Add("Chasing", new Chasing(this, agent, playerTransform, chasingSpeed));
+            SetCurrentState(GetState("Roaming"));
+
         }
 
-    }
+        private void Update() {
 
-    void CheckIfPlayerInRange()
-    {
-        if (Vector3.Distance(transform.position, playerTransform.position) < sightRange && agent.CalculatePath(playerTransform.position, path) && path.status != NavMeshPathStatus.PathPartial)
-        {
-            state = State.Chasing;
-        }
-        else
-        {
-            state = State.Roaming;
-        }
-    }
+            state.Update();
 
-    Vector3 GetRoamingPosition()
-    {
-        bool roamingPosFound = false;
-        Vector3 roamingPos = new Vector3();
-        while (roamingPosFound == false)
-        {
-            roamingPos = startingPosition + GetRandomDirection() * Random.Range(10, 70);
-            if (agent.CalculatePath(roamingPos, path) && path.status != NavMeshPathStatus.PathPartial)
-                roamingPosFound = true;
-        }
-        return roamingPos;
-    }
-    Vector3 GetRandomDirection()
-    {
-        return new Vector3(UnityEngine.Random.Range(-1f, 1f), 0, UnityEngine.Random.Range(-1f, 1f)).normalized;
-    }
+            if (CheckIfPlayerInChasingRange()) {
+                SetCurrentState(GetState("Chasing"));
+            }
+            else {
+                SetCurrentState(GetState("Roaming"));
+            }
 
+            animator.SetFloat("Speed", agent.speed);
+
+        }
+
+        public void Add(string key, State state) {
+
+            states.Add(key, state);
+
+        }
+
+        public State GetState(string key) {
+
+            return states[key];
+
+        }
+
+        public void SetCurrentState(State state) {
+
+            if (state != null) {
+
+                state.Exit();
+
+            }
+
+            this.state = state;
+
+            if (state != null) {
+
+                state.Enter();
+
+            }
+        }
+
+        bool CheckIfPlayerInChasingRange() {
+
+            bool returnValue = false;
+
+            RaycastHit hit = new RaycastHit();
+            int ignoreMask = ~LayerMask.NameToLayer("Action");
+            Physics.Raycast(transform.position, playerTransform.position - transform.position, out hit, sightRange, ignoreMask);
+
+
+            if (hit.collider != null) {
+
+
+                switch (hit.collider.tag) {
+
+                    case "Player":
+
+                        returnValue = true;
+                        break;
+
+                    case "Wall":
+
+                        returnValue = false;
+                        break;
+
+                }
+            }
+
+            return returnValue;
+
+        }
+
+
+        #endregion
+
+    }
 }

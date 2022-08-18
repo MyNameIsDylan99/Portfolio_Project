@@ -1,0 +1,16 @@
+{
+    "name": "CellularAutomata",
+    "rootNamespace": "",
+    "references": [
+        "GUID:6b30f28a0367eb542b839dbd0f68e0e9"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
