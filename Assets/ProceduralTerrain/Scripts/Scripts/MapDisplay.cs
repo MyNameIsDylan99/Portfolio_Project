@@ -10,6 +10,8 @@ public class MapDisplay : MonoBehaviour {
      MeshFilter meshFilter;
     [SerializeField]
      MeshRenderer meshRenderer;
+    [SerializeField]
+    Spawner spawner;
     #endregion
 
     #region Methods
@@ -21,6 +23,7 @@ public class MapDisplay : MonoBehaviour {
 	public void DrawMesh(MeshData meshData, Texture2D texture) {
 		meshFilter.sharedMesh = meshData.CreateMesh ();
 		meshRenderer.sharedMaterial.mainTexture = texture;
+        spawner.SetVertices(meshFilter.sharedMesh.vertices);
 	}
     #endregion
 }

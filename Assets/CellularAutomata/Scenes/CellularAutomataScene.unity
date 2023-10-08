@@ -405,8 +405,8 @@ MonoBehaviour:
   height: 10
   width: 10
   depth: 10
-  randomFillPercent: 43
-  createSingleBlockInCenter: 0
+  randomFillPercent: 24
+  createSingleBlockInCenter: 1
   updateFrequency: 0.1
   gridContainer: {fileID: 0}
   destroyPreviewMat: {fileID: 2100000, guid: 9cfbedc2b6d9a81419f08e2394cf03db, type: 2}

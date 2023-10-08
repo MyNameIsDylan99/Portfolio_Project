@@ -53,6 +53,7 @@ namespace CellularAutomata {
             _target = (GridCreator)target;
             style.richText = true;
             style.fontSize = 12;
+            style.normal.textColor = Color.white;
             handleStyle.richText = true;
             handleStyle.fontSize = 18;
             gridCreatorIsActive = true;
@@ -100,8 +101,7 @@ namespace CellularAutomata {
 
 
         }
-           void OnSceneGUI() {
-            Debug.Log("test");
+           public void OnSceneGUI() {
             if (currentCameraTransform == null)
                 currentCameraTransform = Camera.current.transform;
 

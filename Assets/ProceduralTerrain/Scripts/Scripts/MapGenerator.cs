@@ -67,6 +67,7 @@ public class MapGenerator : MonoBehaviour {
     #region Methods
     void Awake() {
         falloffMap = FalloffGenerator.GenerateFalloffMap(MapChunkSize);
+        DrawMapInEditor();
     }
 
     public void DrawMapInEditor() {
